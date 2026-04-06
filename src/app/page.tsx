@@ -1,6 +1,7 @@
 // src/app/page.tsx
 'use client';
 import React from 'react';
+import { motion } from 'framer-motion';
 import Hero from './components/Hero';
 import About from './components/About';
 //import Events from './components/Events';
@@ -15,22 +16,37 @@ import FAQ from './components/FAQ';
 import Reason from './components/reason';
 
 export default function MainPage() {
+  const scrollToRegistration = () => {
+    const element = document.getElementById('registration-section');
+    if (element) {
+      const navbarHeight = 80;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth',
+      });
+    }
+  };
+
   return (
     <div className="relative min-h-screen">
       <Navbar />
 
-      {/* Animated Button
-      <div className="bottom-4 z-50 fixed right-4">
+      <div className="bottom-4 sm:bottom-6 z-50 fixed right-4 sm:right-6">
         <motion.button
-          className="bg-gradient-to-r from-green-500 to-green-700 text-white px-6 py-3 rounded-full text-lg font-bold shadow-lg"
+          className="bg-[#FF8A00] text-white font-['OSK'] tracking-wider uppercase py-3 px-5 sm:px-6 rounded-full text-sm sm:text-base shadow-lg transition-all hover:bg-[#FFB700]"
           initial={{ scale: 1 }}
           animate={{ scale: [1, 1.1, 1] }}
           transition={{ duration: 1, repeat: Infinity, repeatType: 'reverse' }}
-          onClick={() => document.getElementById('registration-section')?.scrollIntoView({ behavior: 'smooth' })}
+          whileHover={{ scale: 1.03, boxShadow: '0 0 15px 2px rgba(255,138,0,0.3)' }}
+          whileTap={{ scale: 0.98 }}
+          onClick={scrollToRegistration}
         >
-          Join Us for Free
+          Register Now
         </motion.button>
-      </div> */}
+      </div>
 
 
       <section id="home" className="min-h-screen">

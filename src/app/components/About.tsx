@@ -13,15 +13,9 @@ export default function About() {
     email: "",
     age: "",
     gender: "",
-    otherGender: "",
     phoneNumber: "",
-    state: "",
     city: "",
-    country: "",
     occupation: "",
-    otherOccupation: "",
-    institution: "", // New field for college/institute
-    referredBy: "",
     interest: [] as string[], // Ensure this is an empty array initially
   });
 
@@ -121,9 +115,6 @@ export default function About() {
       }));
     }
   };
-
-  // Check if the user needs to specify their institution
-  const shouldShowInstitution = formData.occupation === "Student" || formData.occupation === "Faculty/Professor";
 
   return (
     <div className="relative min-h-screen p-4 sm:p-[2em] pt-10 sm:pt-16" id="about">
@@ -265,56 +256,31 @@ export default function About() {
                 name="gender"
                 value={formData.gender}
                 onChange={handleChange}
+                required
                 className="font-['OSK'] w-full p-3 border border-[#9EE666]/40 rounded-lg bg-white/90 backdrop-blur-sm focus:ring-2 focus:ring-[#67B044] focus:border-transparent text-gray-700 appearance-none cursor-pointer tracking-wider"
               >
-                <option hidden>Select your Gender</option>
-                <option>Male</option>
-                <option>Female</option>
-                <option>Other</option>
+                <option value="" disabled>Select your Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
               </select>
-              {formData.gender === 'Other' && (
-                <input
-                  type="text"
-                  name="otherGender"
-                  value={formData.otherGender}
-                  onChange={handleChange}
-                  placeholder="Please specify"
-                  className="font-['OSK'] w-full p-3 border border-[#9EE666]/40 rounded-lg bg-white/90 backdrop-blur-sm focus:ring-2 focus:ring-[#67B044] focus:border-transparent text-gray-700 appearance-none cursor-pointer tracking-wider"
-                />
-              )}
               <div className="flex gap-2">
                 <input
-                  type="text"
+                  type="tel"
                   name="phoneNumber"
                   value={formData.phoneNumber}
                   onChange={handleChange}
-                  placeholder="Phone Number"
+                  placeholder="Phone Number*"
+                  required
                   className="font-['OSK'] w-full p-3 border border-[#9EE666]/40 rounded-lg bg-white/90 backdrop-blur-sm focus:ring-2 focus:ring-[#67B044] focus:border-transparent text-gray-700 placeholder-gray-400 tracking-wider"
                 />
               </div>
               <input
                 type="text"
-                name="state"
-                value={formData.state}
-                onChange={handleChange}
-                placeholder="Select State"
-                className="font-['OSK'] w-full p-3 border border-[#9EE666]/40 rounded-lg bg-white/90 backdrop-blur-sm focus:ring-2 focus:ring-[#67B044] focus:border-transparent text-gray-700 placeholder-gray-400 tracking-wider"
-              />
-              <input
-                type="text"
                 name="city"
                 value={formData.city}
                 onChange={handleChange}
-                placeholder="City"
-                required
-                className="font-['OSK'] w-full p-3 border border-[#9EE666]/40 rounded-lg bg-white/90 backdrop-blur-sm focus:ring-2 focus:ring-[#67B044] focus:border-transparent text-gray-700 placeholder-gray-400 tracking-wider"
-              />
-              <input
-                type="text"
-                name="country"
-                value={formData.country}
-                onChange={handleChange}
-                placeholder="Country"
+                placeholder="City*"
                 required
                 className="font-['OSK'] w-full p-3 border border-[#9EE666]/40 rounded-lg bg-white/90 backdrop-blur-sm focus:ring-2 focus:ring-[#67B044] focus:border-transparent text-gray-700 placeholder-gray-400 tracking-wider"
               />
@@ -356,6 +322,7 @@ export default function About() {
                   name="occupation"
                   value={formData.occupation}
                   onChange={handleChange}
+                  required
                   className='font-["OSK"] w-full p-3 border border-[#9EE666]/40 rounded-lg bg-white/90 backdrop-blur-sm focus:ring-2 focus:ring-[#67B044] focus:border-transparent text-gray-700 appearance-none cursor-pointer tracking-wider pr-10'
                 >
                   <option value="" disabled>Your Occupation</option>
@@ -374,64 +341,6 @@ export default function About() {
                 <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
                   <FiChevronDown className="w-5 h-5 text-gray-500" />
                 </div>
-              </div>
-              {/* Institution Field - Appears for Students and Faculty/Professors */}
-              {shouldShowInstitution && (
-                <motion.div
-                  initial={{ opacity: 0, y: -10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  <input
-                    type="text"
-                    name="institution"
-                    value={formData.institution}
-                    onChange={handleChange}
-                    placeholder={formData.occupation === "Student" 
-                      ? "College/Institute Name*" 
-                      : "Institution/University Name*"
-                    }
-                    required
-                    className="font-['OSK'] w-full p-3 border border-[#9EE666]/40 rounded-lg bg-white/90 backdrop-blur-sm focus:ring-2 focus:ring-[#67B044] focus:border-transparent text-gray-700 placeholder-gray-400 tracking-wider"
-                  />
-                </motion.div>
-              )}
-              {formData.occupation === 'Other' && (
-                <input
-                  type="text"
-                  name="otherOccupation"
-                  value={formData.otherOccupation}
-                  onChange={handleChange}
-                  placeholder="Specify your occupation"
-                  className="font-['OSK'] w-full p-3 border border-[#9EE666]/40 rounded-lg bg-white/90 backdrop-blur-sm focus:ring-2 focus:ring-[#67B044] focus:border-transparent text-gray-700 appearance-none cursor-pointer tracking-wider"
-                />
-              )}
-              <div className="relative">
-                <label className="block text-gray-700 text-sm font-bold mb-2 font-['OSK'] tracking-wider">
-                  Referred By (Cambridge Institute of Technology member) ?
-                </label>
-                <div className="flex">
-                  <input
-                    type="text"
-                    name="referredBy"
-                    value={formData.referredBy}
-                    onChange={handleChange}
-                    placeholder="Mail id ( Ex: abc.22cse )"
-                    className="font-['OSK'] flex-grow p-3 border border-[#9EE666]/40 rounded-l-lg bg-white/90 backdrop-blur-sm focus:ring-2 focus:ring-[#67B044] focus:border-transparent text-gray-700 placeholder-gray-400 tracking-wider"
-                  />
-                  <span className="font-['OSK'] flex items-center justify-center p-3 bg-gray-200 border border-[#9EE666]/40 rounded-r-lg text-gray-700 tracking-wider">
-                    @cambridge.edu.in
-                  </span>
-                </div>
-                <p className="text-xs italic text-gray-600 mt-1 font-['OSK'] tracking-wide">
-                  Optional: Enter the mail id of a Cambridge Institute member who referred you.
-                </p>
-              </div>
-              {/* Referral Disclaimer */}
-              <div className="mb-4">
-                <p className="text-xs text-gray-600 font-['OSK'] tracking-wide">
-                By providing a referral, I hereby confirm that the referred individual is a  member of Cambridge Institute of Technology, including students, faculty, or staff. I acknowledge that any inaccurate or false referrals will result in the disqualification of both the referring and referred parties from all associated recognitions, benefits, and prizes. Valid referrals will be duly considered for special recognition and exclusive rewards.
-                </p>
               </div>
               <motion.button
                 type="submit"
