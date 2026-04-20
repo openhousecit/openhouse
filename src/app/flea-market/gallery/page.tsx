@@ -9,20 +9,13 @@ import Footer from '@/app/components/Footer';
 
 const fleaMarketImages = [
   '/flea market/Copy of _JEE0475.webp',
-  '/flea market/Copy of _JEE0741.webp',
-  '/flea market/Copy of 20250420_140135.webp',
-  '/flea market/Copy of Copy of IMG_6074 - Copy.webp',
   '/flea market/Copy of Copy of IMG_9404.webp',
   '/flea market/Copy of Copy of IMG_9536.webp',
-  '/flea market/Copy of IMG_6089 (2).webp',
+
   '/flea market/Copy of IMG_7208.webp',
   '/flea market/Copy of IMG_9234 (2).webp',
-  '/flea market/Copy of IMG_9508 (1).webp',
   '/flea market/Copy of IMG_9527 - Copy.webp',
  
-  '/flea market/Copy of RY3A9419 - Copy.webp',
-  '/flea market/Copy of RY3A9429 (1).webp',
-  '/flea market/Copy of RY3A9556 (1).webp',
 ];
 
 const sectionVariants = {
