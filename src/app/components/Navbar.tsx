@@ -87,13 +87,15 @@ const Navbar: React.FC = () => {
           </span>
         </button>
             <button
-            onClick={() => window.open('/flea-market/gallery', '_blank')}
           className="flex items-center gap-3 h-11 px-6 rounded-xl bg-zinc-950 dark:bg-white text-white dark:text-black hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 shadow-xl"
-        >
+        >   
+        <a href="/flea-market/gallery" target="_blank" rel="noopener noreferrer">
           <span className="font-mono text-[10px] font-bold uppercase tracking-[0.25em]">
            Flea Market
           </span>
+        </a>
         </button>
+        
 
         </div>
     </nav>
