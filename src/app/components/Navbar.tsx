@@ -123,14 +123,14 @@ const Navbar: React.FC = () => {
         </button>
 
         {/* Module 3: Secondary Action (Sponsors - Now High Visibility) */}
-        <Link 
+        {/* <Link 
           href="/sponsors" 
           className="flex items-center px-5 h-11 rounded-xl bg-white/20 dark:bg-white/10 border border-white/10 backdrop-blur-md transition-all duration-300 group hover:bg-white/30 dark:hover:bg-white/20"
         >
           <span className="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-zinc-900 dark:text-white">
             Sponsors
           </span>
-        </Link>
+        </Link> */}
       </div>
     </nav>
   );

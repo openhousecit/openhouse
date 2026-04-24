@@ -458,7 +458,7 @@
 
 //   return (
 //     <div className="relative min-h-screen bg-[#FAF9F6] overflow-hidden selection:bg-[#9EE666]" id="about">
-      
+
 //       {/* BACKGROUND DECOR */}
 //       <div className="absolute top-0 left-0 w-full h-full pointer-events-none overflow-hidden opacity-20">
 //         <h1 className="absolute -left-20 top-40 text-[20vw] font-black text-zinc-200 leading-none rotate-90 origin-top-left uppercase">
@@ -467,7 +467,7 @@
 //       </div>
 
 //       <div className="relative z-10 max-w-screen-2xl mx-auto px-6 py-24 lg:py-40">
-        
+
 //         {/* HERO SECTION - ASYMMETRIC */}
 //         <div className="flex flex-col lg:flex-row gap-12 mb-40">
 //           <motion.div 
@@ -536,7 +536,7 @@
 
 //         {/* REGISTRATION BLOCK - SPLIT SCREEN CRAZY */}
 //         <div className="flex flex-col lg:flex-row gap-8 items-stretch" id="registration-section">
-          
+
 //           {/* IMAGE BLOCK */}
 //           <motion.div 
 //             initial={{ opacity: 0, x: -50 }}
@@ -712,15 +712,15 @@ export default function About() {
       }
 
       const check = await fetch(
-  `/api/check-user?email=${encodeURIComponent(formData.email)}&phoneNumber=${encodeURIComponent(formData.phoneNumber)}`
-);
+        `/api/check-user?email=${encodeURIComponent(formData.email)}&phoneNumber=${encodeURIComponent(formData.phoneNumber)}`
+      );
 
-const result = await check.text();
+      const result = await check.text();
 
-if (result === "EXISTS") {
-  setStatus("You have already registered.");
-  return;
-}
+      if (result === "EXISTS") {
+        setStatus("You have already registered.");
+        return;
+      }
 
       const res = await fetch("/api/register", {
         method: "POST",
@@ -730,20 +730,20 @@ if (result === "EXISTS") {
       if (res.ok) router.push('/success');
       const data = await res.json();
 
-if (res.ok) {
-  router.push('/success');
-} else {
-  setStatus(data.error || "Registration Failed.");
-}
+      if (res.ok) {
+        router.push('/success');
+      } else {
+        setStatus(data.error || "Registration Failed.");
+      }
     } catch (error) {
-  console.error("Registration failed:", error);
-  setStatus("Network Error.");
-}
+      console.error("Registration failed:", error);
+      setStatus("Network Error.");
+    }
   };
 
   return (
     <div className="relative min-h-screen bg-[#FAF9F6] overflow-hidden selection:bg-[#9EE666]" id="about">
-      
+
       {/* BACKGROUND DECOR */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none overflow-hidden opacity-20">
         <h1 className="absolute -left-20 top-40 text-[20vw] font-black text-zinc-200 leading-none rotate-90 origin-top-left uppercase">
@@ -752,10 +752,10 @@ if (res.ok) {
       </div>
 
       <div className="relative z-10 max-w-screen-2xl mx-auto px-6 py-24 lg:py-40">
-        
+
         {/* HERO SECTION - ASYMMETRIC */}
         <div className="flex flex-col lg:flex-row gap-12 mb-40">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -763,14 +763,14 @@ if (res.ok) {
           >
             <span className="text-[10px] font-black tracking-[0.4em] text-[#67B044] uppercase mb-4 block">/ The Showcase</span>
             <h2 className="text-6xl md:text-9xl font-bold tracking-tighter text-[#1A1A1A] leading-[0.85] mb-8">
-              Open House <br/> <span className="italic font-light text-zinc-400">Exhibition.</span>
+              Open House <br /> <span className="italic font-light text-zinc-400">Exhibition.</span>
             </h2>
             <p className="text-xl md:text-3xl text-zinc-600 max-w-2xl leading-tight font-light tracking-tight">
               Discover a world of innovation at CIT&apos;s largest tech exhibition featuring 100+ stalls of groundbreaking ideas and solutions.
             </p>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             className="lg:w-1/3 flex items-center justify-center lg:justify-end"
@@ -792,7 +792,7 @@ if (res.ok) {
         </div>
 
         {/* FULL SCALE MAIN IMAGE */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
           className="w-full h-[50vh] md:h-[80vh] relative rounded-[3rem] overflow-hidden mb-40 "
@@ -803,7 +803,7 @@ if (res.ok) {
         {/* FEATURES - SEAMLESS BENTO */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-40">
           {features.map((f, i) => (
-            <motion.div 
+            <motion.div
               key={i}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -821,9 +821,9 @@ if (res.ok) {
 
         {/* REGISTRATION BLOCK - SPLIT SCREEN CRAZY */}
         <div className="flex flex-col lg:flex-row gap-8 items-stretch" id="registration-section">
-          
+
           {/* IMAGE BLOCK */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             className="lg:w-1/2 relative min-h-[500px] rounded-[3rem] overflow-hidden bg-[#9EE666]/10"
@@ -832,7 +832,7 @@ if (res.ok) {
           </motion.div>
 
           {/* FORM BLOCK */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             className="lg:w-1/2 bg-black rounded-[3rem] p-8 md:p-16 text-white"
