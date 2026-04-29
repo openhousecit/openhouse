@@ -73,7 +73,10 @@ const Hero = () => {
                   </p>
                 </div>
 
-                <RegisterButton
+                {/* <motion.button
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  onClick={() => document.getElementById("registration-section")?.scrollIntoView({ behavior: "smooth" })}
                   className="group relative px-12 py-5 bg-white text-black font-bold text-xs uppercase tracking-[0.2em] rounded-full overflow-hidden transition-all"
                   label="Initialize Registration"
                 >
@@ -81,7 +84,7 @@ const Hero = () => {
                     Initialize Registration
                     <div className="w-1.5 h-1.5 rounded-full bg-black group-hover:bg-[#FF8A00] transition-colors" />
                   </span>
-                </RegisterButton>
+                </motion.button> */}
               </motion.div>
 
             </div>
