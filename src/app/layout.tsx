@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Audiowide, Rajdhani } from 'next/font/google';
 import './globals.css';
 import Script from 'next/script'; // ✅ Import Script
+import AnnouncementBanner from './components/AnnouncementBanner';
 
 const audiowide = Audiowide({
   subsets: ['latin'],
@@ -59,6 +60,7 @@ export default function RootLayout({
         </noscript>
 
         {/* Main Content */}
+        <AnnouncementBanner />
         <div className="relative">{children}</div>
       </body>
     </html>

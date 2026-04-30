@@ -19,10 +19,10 @@ const SuccessPage = () => {
                             Registration <br className="md:hidden" /> <span className="inline-block mt-2 md:mt-4 md:ml-3">Successful!</span>
                         </h1>
                         <p className="text-xl text-gray-600 font-['OSK'] tracking-wider mb-2">
-                            We are all ready to see you at the Open Day!
+                            Your registration has been received successfully.
                         </p>
                         <p className="text-lg text-[#67B044] font-semibold font-['OSK'] tracking-wider">
-                            2nd MAY 2026 from 9:30 AM - 5:00 PM
+                            Event date is tentative. Revised schedule will be shared soon.
                         </p>
                     </motion.div>
 
@@ -46,7 +46,7 @@ const SuccessPage = () => {
                                         Confirmation Details
                                     </h3>
                                     <p className="text-gray-600 font-['OSK'] tracking-wider leading-relaxed">
-                                        Your registration for Cambridge Institute of Technology Open House 2026 has been successfully processed. We&apos;re excited to welcome you to our campus for an extraordinary showcase of innovation and technology.
+                                        Your registration for Cambridge Institute of Technology Open House 2026 has been successfully processed. The event is currently tentatively postponed, and we will confirm the updated date as soon as it is finalized.
                                     </p>
                                 </div>
                             </div>
@@ -64,7 +64,7 @@ const SuccessPage = () => {
                                         What&apos;s Next?
                                     </h3>
                                     <p className="text-gray-600 font-['OSK'] tracking-wider leading-relaxed">
-                                        You will receive a confirmation email shortly with all the event details, including the schedule, venue information, and parking details. Please check your inbox and spam folder.
+                                        You will receive an update with the revised event date, schedule, venue information, and parking details once they are confirmed. Please keep an eye on your inbox and spam folder.
                                     </p>
                                 </div>
                             </div>
@@ -83,7 +83,7 @@ const SuccessPage = () => {
                                         Get Ready for the Experience
                                     </h3>
                                     <p className="text-gray-600 font-['OSK'] tracking-wider leading-relaxed">
-                                        Prepare to explore 100+ innovation stalls, witness live demonstrations, and participate in interactive workshops. Our team is working hard to make this an unforgettable experience for you!
+                                        We are still preparing an exciting showcase of innovation stalls, live demonstrations, and interactive experiences. Thank you for your patience while we finalize the updated event plan.
                                     </p>
                                 </div>
                             </div>

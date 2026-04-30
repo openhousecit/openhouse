@@ -94,7 +94,7 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="fixed top-6 left-0 w-full flex justify-center z-[100] px-4 pointer-events-none">
+    <nav className="fixed top-16 left-0 w-full flex justify-center z-[100] px-4 pointer-events-none sm:top-[4.5rem]">
       <div 
         ref={navRef}
         className="pointer-events-auto flex items-center p-1.5 gap-2 bg-white/10 dark:bg-zinc-900/10 backdrop-blur-3xl border border-white/20 rounded-2xl shadow-[0_25px_50px_-12px_rgba(0,0,0,0.5)]"

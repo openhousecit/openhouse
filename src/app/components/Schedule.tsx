@@ -239,9 +239,12 @@ export default function Schedule() {
           >
             <span className="text-[10px] font-black uppercase tracking-[0.5em] text-zinc-400 mb-6">/ System.Core.Timeline</span>
             <h2 className="text-6xl md:text-9xl font-bold tracking-tight text-[#1A1A1A] leading-[0.85]">
-              Event <br /> 
+              Tentative <br /> 
               <span className="italic font-serif font-light text-zinc-400">Schedule.</span>
             </h2>
+            <p className="mt-8 max-w-3xl text-base font-medium text-zinc-500 sm:text-lg">
+              The event has been tentatively postponed. The agenda below is indicative and will be updated once the revised date is announced.
+            </p>
           </motion.div>
         </div>
 
@@ -303,9 +306,9 @@ export default function Schedule() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
         >
-          <p className="text-zinc-400 font-medium italic">Timings are subject to minor adjustments.</p>
+          <p className="text-zinc-400 font-medium italic">Final timings and session flow will be shared along with the revised event date.</p>
           <div className="flex gap-4">
-             <div className="w-12 h-12 rounded-full border border-zinc-200 flex items-center justify-center text-xs font-black">2026</div>
+             <div className="w-12 h-12 rounded-full border border-zinc-200 flex items-center justify-center text-xs font-black">TBA</div>
           </div>
         </motion.div>
       </div>

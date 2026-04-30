@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import RegisterButton from './RegisterButton';
 
 const Hero = () => {
   const [isFinished, setIsFinished] = useState(false);
@@ -50,11 +49,11 @@ const Hero = () => {
                   <span className="font-mono text-[10px] tracking-[0.4em] uppercase text-white/40">Open_House_v2.6</span>
                 </div>
                 <h1 className="text-white font-[BS] text-7xl lg:text-[4vw] font-bold tracking-tighter leading-[1.5] uppercase">
-                  2ND MAY <br />
-                  <span className="text text-[#FF8A00]">10:00AM TO 5:00PM</span>
+                  Date <br />
+                  <span className="text text-[#FF8A00]">Tentative</span>
                 </h1>
                 <p className="mt-8 text-white/50 text-sm font-medium tracking-tight max-w-xs leading-relaxed">
-                  Join us at the Cambridge Institute of Technology for a sovereign showcase of neural architecture and robotics.
+                  Due to unforeseen circumstances, the event has been tentatively postponed. Updated dates and timings will be announced soon.
                 </p>
               </motion.div>
 
