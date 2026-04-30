@@ -216,8 +216,8 @@ export default function HeroSection() {
       <div className="mt-4 h-[3px] w-[330px] bg-red-700" />
 
       {/* Date */}
-      <p className="mt-3 text-[56px] font-light tracking-tight text-white/90">
-        02/06/2026
+      <p className="mt-3 text-[56px] font-light uppercase tracking-tight text-white/90">
+        Date Tentative
       </p>
     </div>
   </div>

@@ -229,14 +229,27 @@ footer a:hover {
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 80px;
-  /* Height of the navbar */
+  scroll-padding-top: 140px;
 }
 
 body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+}
+
+@keyframes announcement-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-33.333%);
+  }
+}
+
+.announcement-track {
+  animation: announcement-scroll 24s linear infinite;
 }
 
 .gtm-noscript-frame {
